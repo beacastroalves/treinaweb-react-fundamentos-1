@@ -10,6 +10,7 @@ const TextInput = ({placeholder = 'O que está acontecendo?', maxLength = 125, .
     const text = event.target.value;
     if(text.length <= maxLength) {
       setText(text);
+      
     }
   };
 
