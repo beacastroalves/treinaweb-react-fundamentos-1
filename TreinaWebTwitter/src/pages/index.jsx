@@ -1,5 +1,6 @@
 import { useState } from "react";
 import TextInput from "../components/TextInput";
+import Tweet from "../components/Tweet";
 
 const Index = () => {
 
@@ -38,7 +39,9 @@ const Index = () => {
 
       <ul>
         {tweetList.map(tweet => {
-          return <li>{tweet}</li>
+          return (
+            <li><Tweet children={tweet} /></li>
+          )
         })}
       </ul>
     </div>
