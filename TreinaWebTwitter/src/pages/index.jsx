@@ -1,6 +1,7 @@
 import { useState } from "react";
 import TextInput from "../components/TextInput";
 import Tweet from "../components/Tweet";
+import styles from "./index.module.css";
 
 const Index = () => {
 
@@ -21,20 +22,22 @@ const Index = () => {
   };
 
   return (
-    <div>
-      <h1>TreinaWebTweet</h1>
-      <div>
+    <div className={styles.container}>
+      <h1 className={styles.pageTitle}>TreinaWebTweet</h1>
+      <div className={styles.line}></div>
+      <div className={styles.contentText}>
         <img src="https://github.com/beacastroalves.png" />
         <TextInput
+          className={styles.textInput}
           placeholder={'O que está acontecendo?'}
           maxLength={maxLength}
           value={text}
           onChange={onTextChange}
         />
       </div>
-      <div>
-        <div>{text.length} / {maxLength}</div>
-      <button onClick={sendTweet}>Enviar</button>
+      <div className={styles.contentInfo}>
+        <div className={styles.caracteres}>{text.length} / {maxLength}</div>
+        <button onClick={sendTweet}>Tweetar</button>
       </div>
 
       <ul>

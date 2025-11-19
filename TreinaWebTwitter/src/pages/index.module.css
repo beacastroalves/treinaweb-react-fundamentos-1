@@ -1,0 +1,74 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  user-select: none;
+}
+
+.container .pageTitle {
+  color: var(--primary);
+  font-size: 24px;
+  margin: 0;
+}
+
+.container .line {
+  border: 1px solid var(--border);
+  margin: 0;
+  margin-top: 8px;
+  margin-bottom: 12px;
+}
+
+.container .contentText {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  width: 100%;
+  gap: 16px;
+  height: 100px;
+  user-select: none;
+}
+
+.container .contentText img {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+}
+
+.container .contentText .textInput {
+  height: 80px;
+  width: 100%;
+  outline-color: var(--border);
+  border-color: var(--border);
+  padding: 8px;
+  color: var(--primary-text);
+}
+
+.container .contentInfo {
+  display: flex;
+  gap: 16px;
+  justify-content: flex-end;
+  align-items: center;
+  user-select: none;
+}
+
+.container .contentInfo .caracteres {
+  color: var(--primary-text);
+}
+
+.container .contentInfo button {
+  padding: 8px 24px;
+  border-radius: 16px;
+  cursor: pointer;
+  background-color: var(--primary);
+  border: none;
+  color: white;
+  font-weight: bold;
+}
+
+.container .contentInfo button:hover {
+  filter: brightness(0.96);
+}
+
+.container .contentInfo button:active {
+  transform: translate(1px, 1px);
+  transition-duration: 0.15s;
+}
